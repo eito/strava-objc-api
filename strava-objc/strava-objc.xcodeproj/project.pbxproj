@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4EB797F218374A650025D149 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB797F118374A650025D149 /* Foundation.framework */; };
+		4EB797F718374A650025D149 /* Strava.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4EB797F618374A650025D149 /* Strava.h */; };
+		4EB7985E18374CAB0025D149 /* STRVSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7985D18374CAB0025D149 /* STRVSegment.m */; };
+		4EB79862183757870025D149 /* STRVMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB79861183757870025D149 /* STRVMap.m */; };
+		4EB79865183761E10025D149 /* STRVLeaderboardEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB79864183761E10025D149 /* STRVLeaderboardEntry.m */; };
+		4EB79868183763890025D149 /* STRVUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB79867183763890025D149 /* STRVUtility.m */; };
+		4EB7986B183768B60025D149 /* STRVAthlete.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7986A183768B60025D149 /* STRVAthlete.m */; };
+		4EB7986E18376B360025D149 /* STRVEnumerations.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7986D18376B360025D149 /* STRVEnumerations.m */; };
+		4EB798711837730E0025D149 /* STRVClub.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB798701837730E0025D149 /* STRVClub.m */; };
+		4EB798741837734A0025D149 /* STRVBike.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB798731837734A0025D149 /* STRVBike.m */; };
+		4EB798771837737C0025D149 /* STRVShoe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB798761837737C0025D149 /* STRVShoe.m */; };
+		4EB7987B1837784F0025D149 /* STRVActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7987A1837784F0025D149 /* STRVActivity.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4EB797EC18374A650025D149 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				4EB797F718374A650025D149 /* Strava.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4EB797EE18374A650025D149 /* libstrava-objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libstrava-objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB797F118374A650025D149 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4EB797F518374A650025D149 /* strava-objc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "strava-objc-Prefix.pch"; sourceTree = "<group>"; };
+		4EB797F618374A650025D149 /* Strava.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Strava.h; sourceTree = "<group>"; };
+		4EB797FF18374A650025D149 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4EB7980218374A650025D149 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		4EB7985C18374CAB0025D149 /* STRVSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRVSegment.h; sourceTree = "<group>"; };
+		4EB7985D18374CAB0025D149 /* STRVSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRVSegment.m; sourceTree = "<group>"; };
+		4EB7985F183750E30025D149 /* STRVCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STRVCoding.h; sourceTree = "<group>"; };
+		4EB79860183757870025D149 /* STRVMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRVMap.h; sourceTree = "<group>"; };
+		4EB79861183757870025D149 /* STRVMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRVMap.m; sourceTree = "<group>"; };
+		4EB79863183761E10025D149 /* STRVLeaderboardEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRVLeaderboardEntry.h; sourceTree = "<group>"; };
+		4EB79864183761E10025D149 /* STRVLeaderboardEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRVLeaderboardEntry.m; sourceTree = "<group>"; };
+		4EB79866183763890025D149 /* STRVUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRVUtility.h; sourceTree = "<group>"; };
+		4EB79867183763890025D149 /* STRVUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRVUtility.m; sourceTree = "<group>"; };
+		4EB79869183768B60025D149 /* STRVAthlete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRVAthlete.h; sourceTree = "<group>"; };
+		4EB7986A183768B60025D149 /* STRVAthlete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRVAthlete.m; sourceTree = "<group>"; };
+		4EB7986C18376B360025D149 /* STRVEnumerations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRVEnumerations.h; sourceTree = "<group>"; };
+		4EB7986D18376B360025D149 /* STRVEnumerations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRVEnumerations.m; sourceTree = "<group>"; };
+		4EB7986F1837730E0025D149 /* STRVClub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRVClub.h; sourceTree = "<group>"; };
+		4EB798701837730E0025D149 /* STRVClub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRVClub.m; sourceTree = "<group>"; };
+		4EB798721837734A0025D149 /* STRVBike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRVBike.h; sourceTree = "<group>"; };
+		4EB798731837734A0025D149 /* STRVBike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRVBike.m; sourceTree = "<group>"; };
+		4EB798751837737C0025D149 /* STRVShoe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRVShoe.h; sourceTree = "<group>"; };
+		4EB798761837737C0025D149 /* STRVShoe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRVShoe.m; sourceTree = "<group>"; };
+		4EB798791837784F0025D149 /* STRVActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRVActivity.h; sourceTree = "<group>"; };
+		4EB7987A1837784F0025D149 /* STRVActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRVActivity.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4EB797EB18374A650025D149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EB797F218374A650025D149 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EB797E518374A650025D149 = {
+			isa = PBXGroup;
+			children = (
+				4EB797F318374A650025D149 /* strava-objc */,
+				4EB797F018374A650025D149 /* Frameworks */,
+				4EB797EF18374A650025D149 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4EB797EF18374A650025D149 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EB797EE18374A650025D149 /* libstrava-objc.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EB797F018374A650025D149 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EB797F118374A650025D149 /* Foundation.framework */,
+				4EB797FF18374A650025D149 /* XCTest.framework */,
+				4EB7980218374A650025D149 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EB797F318374A650025D149 /* strava-objc */ = {
+			isa = PBXGroup;
+			children = (
+				4EB797F618374A650025D149 /* Strava.h */,
+				4EB7985B18374C8B0025D149 /* Models */,
+				4EB797F418374A650025D149 /* Supporting Files */,
+			);
+			path = "strava-objc";
+			sourceTree = "<group>";
+		};
+		4EB797F418374A650025D149 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EB797F518374A650025D149 /* strava-objc-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4EB7985B18374C8B0025D149 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4EB798791837784F0025D149 /* STRVActivity.h */,
+				4EB7987A1837784F0025D149 /* STRVActivity.m */,
+				4EB79869183768B60025D149 /* STRVAthlete.h */,
+				4EB7986A183768B60025D149 /* STRVAthlete.m */,
+				4EB798721837734A0025D149 /* STRVBike.h */,
+				4EB798731837734A0025D149 /* STRVBike.m */,
+				4EB7986F1837730E0025D149 /* STRVClub.h */,
+				4EB798701837730E0025D149 /* STRVClub.m */,
+				4EB7985F183750E30025D149 /* STRVCoding.h */,
+				4EB7986C18376B360025D149 /* STRVEnumerations.h */,
+				4EB7986D18376B360025D149 /* STRVEnumerations.m */,
+				4EB79863183761E10025D149 /* STRVLeaderboardEntry.h */,
+				4EB79864183761E10025D149 /* STRVLeaderboardEntry.m */,
+				4EB79860183757870025D149 /* STRVMap.h */,
+				4EB79861183757870025D149 /* STRVMap.m */,
+				4EB7985C18374CAB0025D149 /* STRVSegment.h */,
+				4EB7985D18374CAB0025D149 /* STRVSegment.m */,
+				4EB798751837737C0025D149 /* STRVShoe.h */,
+				4EB798761837737C0025D149 /* STRVShoe.m */,
+				4EB79866183763890025D149 /* STRVUtility.h */,
+				4EB79867183763890025D149 /* STRVUtility.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4EB797ED18374A650025D149 /* strava-objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EB7981118374A650025D149 /* Build configuration list for PBXNativeTarget "strava-objc" */;
+			buildPhases = (
+				4EB797EA18374A650025D149 /* Sources */,
+				4EB797EB18374A650025D149 /* Frameworks */,
+				4EB797EC18374A650025D149 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "strava-objc";
+			productName = "strava-objc";
+			productReference = 4EB797EE18374A650025D149 /* libstrava-objc.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4EB797E618374A650025D149 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 4EB797E918374A650025D149 /* Build configuration list for PBXProject "strava-objc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4EB797E518374A650025D149;
+			productRefGroup = 4EB797EF18374A650025D149 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4EB797ED18374A650025D149 /* strava-objc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4EB797EA18374A650025D149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EB798711837730E0025D149 /* STRVClub.m in Sources */,
+				4EB7986B183768B60025D149 /* STRVAthlete.m in Sources */,
+				4EB79865183761E10025D149 /* STRVLeaderboardEntry.m in Sources */,
+				4EB798771837737C0025D149 /* STRVShoe.m in Sources */,
+				4EB7985E18374CAB0025D149 /* STRVSegment.m in Sources */,
+				4EB7987B1837784F0025D149 /* STRVActivity.m in Sources */,
+				4EB79862183757870025D149 /* STRVMap.m in Sources */,
+				4EB7986E18376B360025D149 /* STRVEnumerations.m in Sources */,
+				4EB79868183763890025D149 /* STRVUtility.m in Sources */,
+				4EB798741837734A0025D149 /* STRVBike.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4EB7980F18374A650025D149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4EB7981018374A650025D149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4EB7981218374A650025D149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DSTROOT = /tmp/strava_objc.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "strava-objc/strava-objc-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4EB7981318374A650025D149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DSTROOT = /tmp/strava_objc.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "strava-objc/strava-objc-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4EB797E918374A650025D149 /* Build configuration list for PBXProject "strava-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB7980F18374A650025D149 /* Debug */,
+				4EB7981018374A650025D149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EB7981118374A650025D149 /* Build configuration list for PBXNativeTarget "strava-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB7981218374A650025D149 /* Debug */,
+				4EB7981318374A650025D149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4EB797E618374A650025D149 /* Project object */;
+}
