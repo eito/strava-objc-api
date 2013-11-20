@@ -19,6 +19,7 @@
 		4EB798741837734A0025D149 /* STRVBike.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB798731837734A0025D149 /* STRVBike.m */; };
 		4EB798771837737C0025D149 /* STRVShoe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB798761837737C0025D149 /* STRVShoe.m */; };
 		4EB7987B1837784F0025D149 /* STRVActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7987A1837784F0025D149 /* STRVActivity.m */; };
+		4EB798D7183C9E560025D149 /* STRVComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB798D6183C9E560025D149 /* STRVComment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +63,8 @@
 		4EB798761837737C0025D149 /* STRVShoe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRVShoe.m; sourceTree = "<group>"; };
 		4EB798791837784F0025D149 /* STRVActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRVActivity.h; sourceTree = "<group>"; };
 		4EB7987A1837784F0025D149 /* STRVActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRVActivity.m; sourceTree = "<group>"; };
+		4EB798D5183C9E560025D149 /* STRVComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRVComment.h; sourceTree = "<group>"; };
+		4EB798D6183C9E560025D149 /* STRVComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRVComment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				4EB7986F1837730E0025D149 /* STRVClub.h */,
 				4EB798701837730E0025D149 /* STRVClub.m */,
 				4EB7985F183750E30025D149 /* STRVCoding.h */,
+				4EB798D5183C9E560025D149 /* STRVComment.h */,
+				4EB798D6183C9E560025D149 /* STRVComment.m */,
 				4EB7986C18376B360025D149 /* STRVEnumerations.h */,
 				4EB7986D18376B360025D149 /* STRVEnumerations.m */,
 				4EB79863183761E10025D149 /* STRVLeaderboardEntry.h */,
@@ -200,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EB798711837730E0025D149 /* STRVClub.m in Sources */,
+				4EB798D7183C9E560025D149 /* STRVComment.m in Sources */,
 				4EB7986B183768B60025D149 /* STRVAthlete.m in Sources */,
 				4EB79865183761E10025D149 /* STRVLeaderboardEntry.m in Sources */,
 				4EB798771837737C0025D149 /* STRVShoe.m in Sources */,
@@ -330,6 +336,7 @@
 				4EB7981318374A650025D149 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

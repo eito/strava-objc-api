@@ -12,7 +12,7 @@
 
 @interface STRVMap : NSObject<STRVCoding>
 
-@property (nonatomic, assign, readonly) NSUInteger mapID;
+@property (nonatomic, copy, readonly) NSString* mapID;
 @property (nonatomic, assign, readonly) NSUInteger resourceState; // enum
 
 @end

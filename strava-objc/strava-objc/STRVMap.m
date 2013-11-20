@@ -10,7 +10,7 @@
 #import "STRVMap.h"
 
 @interface STRVMap ()
-@property (nonatomic, assign, readwrite) NSUInteger mapID;
+@property (nonatomic, copy, readwrite) NSString* mapID;
 @property (nonatomic, copy, readwrite) NSString *polyline; // rename?
 @property (nonatomic, assign, readwrite) NSUInteger resourceState;
 @end
@@ -29,7 +29,7 @@
      */
     self = [self init];
     if (self) {
-        self.mapID = [json[@"id"] unsignedIntegerValue];
+        self.mapID = json[@"id"];
         self.polyline = json[@"polyline"];
         self.resourceState = [json[@"resource_state"] unsignedIntegerValue];
     }

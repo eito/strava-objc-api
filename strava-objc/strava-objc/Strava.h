@@ -3,6 +3,7 @@
 #import "STRVUtility.h"
 #import "STRVCoding.h"
 #import "STRVMap.h"
+#import "STRVActivity.h"
 #import "STRVSegment.h"
 #import "STRVBike.h"
 #import "STRVClub.h"
