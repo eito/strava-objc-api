@@ -19,8 +19,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    STRVAthlete *ath = [[STRVAthlete alloc] init];
-    NSLog(@"%@", ath);
+    NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"sample_activity" withExtension:@"json"];
+    NSInputStream *is = [[NSInputStream alloc] initWithURL:fileURL];
+    [is open];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithStream:is options:0 error:nil];
+    [is close];
+    STRVActivity *activity = [[STRVActivity alloc] initWithJSON:json];
+    NSLog(@"%@", activity);
 }
 
 - (void)didReceiveMemoryWarning
