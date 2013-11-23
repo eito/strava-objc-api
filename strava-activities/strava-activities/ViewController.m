@@ -10,7 +10,7 @@
 #import "Strava.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) STRVOAuthView *authView;
 @end
 
 @implementation ViewController
@@ -26,6 +26,33 @@
     [is close];
     STRVActivity *activity = [[STRVActivity alloc] initWithJSON:json];
     NSLog(@"%@", activity);
+    
+    
+    // create our authorization for OAuth
+    STRVOAuthAuthorization *auth = [STRVOAuthAuthorization new];
+    auth.clientID = @"143";
+    auth.clientSecret = @"ce71e815b1ac084a85830f6832c05945683f1599";
+    auth.redirectURI = @"http://127.0.0.1";
+    auth.scope = STRVOAuthAccessScopeViewPrivate;
+    
+    // create login view
+    self.authView = [[STRVOAuthView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.authView];
+    [self.authView loadAuthorization:auth];
+    self.authView.completion = ^(NSString *accessToken, NSError *error) {
+        if (!error) {
+            [STRVAPIClient setAccessToken:accessToken];
+        }
+        else {
+            // TODO: Do something better when things go wrong.
+            UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"OAuth Error"
+                                                         message:[error localizedDescription]
+                                                        delegate:nil
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles: nil];
+            [av show];
+        }
+    };
 }
 
 - (void)didReceiveMemoryWarning

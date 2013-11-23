@@ -18,6 +18,8 @@
 		4EB7983C18374AAC0025D149 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB7983B18374AAC0025D149 /* Images.xcassets */; };
 		4EB7985918374B840025D149 /* libstrava-objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB7985818374B840025D149 /* libstrava-objc.a */; };
 		4EB798D4183C94040025D149 /* sample_activity.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EB798D3183C94040025D149 /* sample_activity.json */; };
+		4EB798EB18407AEF0025D149 /* clientSecret.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EB798E918407AEF0025D149 /* clientSecret.json */; };
+		4EB798EC18407AEF0025D149 /* clientID.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EB798EA18407AEF0025D149 /* clientID.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		4EB7985818374B840025D149 /* libstrava-objc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libstrava-objc.a"; path = "../strava-objc/build/Debug-iphoneos/libstrava-objc.a"; sourceTree = "<group>"; };
 		4EB798781837773E0025D149 /* Strava.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Strava.h; path = "../strava-objc/strava-objc/Strava.h"; sourceTree = "<group>"; };
 		4EB798D3183C94040025D149 /* sample_activity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_activity.json; sourceTree = "<group>"; };
+		4EB798E918407AEF0025D149 /* clientSecret.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = clientSecret.json; sourceTree = "<group>"; };
+		4EB798EA18407AEF0025D149 /* clientID.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = clientID.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 		4EB7982A18374AAC0025D149 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4EB798E918407AEF0025D149 /* clientSecret.json */,
+				4EB798EA18407AEF0025D149 /* clientID.json */,
 				4EB798D3183C94040025D149 /* sample_activity.json */,
 				4EB7982B18374AAC0025D149 /* strava-activities-Info.plist */,
 				4EB7982C18374AAC0025D149 /* InfoPlist.strings */,
@@ -166,7 +172,9 @@
 				4EB7983C18374AAC0025D149 /* Images.xcassets in Resources */,
 				4EB7982E18374AAC0025D149 /* InfoPlist.strings in Resources */,
 				4EB798D4183C94040025D149 /* sample_activity.json in Resources */,
+				4EB798EC18407AEF0025D149 /* clientID.json in Resources */,
 				4EB7983718374AAC0025D149 /* Main.storyboard in Resources */,
+				4EB798EB18407AEF0025D149 /* clientSecret.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +293,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "strava-activities/strava-activities-Prefix.pch";
 				INFOPLIST_FILE = "strava-activities/strava-activities-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -298,6 +307,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "strava-activities/strava-activities-Prefix.pch";
 				INFOPLIST_FILE = "strava-activities/strava-activities-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

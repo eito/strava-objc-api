@@ -35,3 +35,19 @@ typedef NS_ENUM(NSInteger, STRVRequestStatus) {
 
 STRVRequestStatus STRVRequestStatusFromString(NSString *status);
 NSString *NSStringFromSTRVRequestStatus(STRVRequestStatus status);
+
+typedef NS_ENUM(NSInteger, STRVHTTPRequestType) {
+    STRVHTTPRequestTypeGet,
+    STRVHTTPRequestTypePost,
+};
+
+/// "public" "write" "view_private" "view_private,write"
+typedef NS_ENUM(NSUInteger, STRVOAuthAccessScope) {
+    STRVOAuthAccessScopePublic,
+    STRVOAuthAccessScopeWrite,
+    STRVOAuthAccessScopeViewPrivate,
+    STRVOAuthAccessScopeAll
+};
+
+STRVOAuthAccessScope STRVOAuthAccessScopeFromString(NSString *scope);
+NSString *NSStringFromSTRVOAuthAccessScope(STRVOAuthAccessScope scope);

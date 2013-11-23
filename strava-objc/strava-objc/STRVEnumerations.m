@@ -78,3 +78,24 @@ NSString *NSStringFromSTRVRequestStatus(STRVRequestStatus status)
     }
     return [STRVRequestStatusStrings() objectAtIndex:status];
 }
+
+#pragma mark STRVOAuthAccessScope
+
+static NSArray *kSTRVOAuthAccessScopeStrings = nil;
+
+NSArray *STRVOAuthAccessScopeStrings() {
+    if (!kSTRVOAuthAccessScopeStrings) {
+        kSTRVOAuthAccessScopeStrings = @[@"public", @"write", @"view_private", @"view_private,write"];
+    }
+    return kSTRVOAuthAccessScopeStrings;
+}
+
+STRVOAuthAccessScope STRVOAuthAccessScopeFromString(NSString *scope)
+{
+    return [STRVOAuthAccessScopeStrings() indexOfObject:scope];
+}
+
+NSString *NSStringFromSTRVOAuthAccessScope(STRVOAuthAccessScope scope)
+{
+    return [STRVOAuthAccessScopeStrings() objectAtIndex:scope];
+}
