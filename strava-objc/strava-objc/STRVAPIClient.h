@@ -19,10 +19,16 @@
 +(NSString*)accessToken;
 
 /// Sets the clientID to be used for all requests to the Strava REST API.
-+(void)setStravaClientID:(NSString*)clientID;
++(void)setClientID:(NSString*)clientID;
 
 /// Returns the clientID to be used for all requests to the Strava REST API.
-+(NSString*)stravaClientID;
++(NSString*)clientID;
+
+/// Sets the clientSecret to be used for all requests to the Strava REST API.
++(void)setClientSecret:(NSString*)clientSecret;
+
+/// Returns the clientSecret to be used for all requests to the Strava REST API.
++(NSString*)clientSecret;
 
 /// The strava authorization endpoint.
 +(NSURL*)authorizationURL;

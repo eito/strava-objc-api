@@ -9,6 +9,7 @@
 #import "STRVAPIClient.h"
 
 static NSString *kStravaClientID = nil;
+static NSString *kStravaClientSecret = nil;
 static NSURL *kStravaAuthorizationURL = nil;
 static NSURL *kStravaTokenURL = nil;
 static NSString *kStravaAccessToken = nil;
@@ -24,12 +25,20 @@ static NSString *kStravaAccessToken = nil;
     return kStravaAccessToken;
 }
 
-+(void)setStravaClientID:(NSString*)clientID {
++(void)setClientID:(NSString*)clientID {
     kStravaClientID = clientID;
 }
 
-+(NSString*)stravaClientID {
++(NSString*)clientID {
     return kStravaClientID;
+}
+
++(void)setClientSecret:(NSString *)clientSecret {
+    kStravaClientSecret = clientSecret;
+}
+
++(NSString*)clientSecret {
+    return kStravaClientSecret;
 }
 
 +(NSURL*)authorizationURL {

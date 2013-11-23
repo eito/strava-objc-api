@@ -30,8 +30,25 @@
     
     // create our authorization for OAuth
     STRVOAuthAuthorization *auth = [STRVOAuthAuthorization new];
-    auth.clientID = @"143";
-    auth.clientSecret = @"ce71e815b1ac084a85830f6832c05945683f1599";
+    
+    //
+    // NOTE: This is unnecessary in your real apps. This is purely to avoid committing sensitive data to github.
+    //
+    NSURL *clientIDURL = [[NSBundle mainBundle] URLForResource:@"clientID" withExtension:@"json"];
+    NSData *clientIDData = [NSData dataWithContentsOfURL:clientIDURL];
+    NSDictionary *clientIDJSON = [NSJSONSerialization JSONObjectWithData:clientIDData options:0 error:nil];
+    NSURL *clientSecretURL = [[NSBundle mainBundle] URLForResource:@"clientSecret" withExtension:@"json"];
+    NSData *clientSecretData = [NSData dataWithContentsOfURL:clientSecretURL];
+    NSDictionary *clientSecretJSON = [NSJSONSerialization JSONObjectWithData:clientSecretData options:0 error:nil];
+    
+    // NOTE: In your apps, just set the STRVAPIClient defaults directly.
+    //       I'm reading from a file so I don't commit my id/secret to github
+    [STRVAPIClient setClientID:[clientIDJSON valueForKey:@"client_id"]];
+    [STRVAPIClient setClientSecret:[clientSecretJSON valueForKey:@"client_secret"]];
+
+    auth.clientID = [STRVAPIClient clientID];
+    auth.clientSecret = [STRVAPIClient clientSecret];
+    
     auth.redirectURI = @"http://127.0.0.1";
     auth.scope = STRVOAuthAccessScopeViewPrivate;
     
