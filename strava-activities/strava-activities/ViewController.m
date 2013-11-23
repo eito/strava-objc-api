@@ -34,10 +34,10 @@
     //
     // NOTE: This is unnecessary in your real apps. This is purely to avoid committing sensitive data to github.
     //
-    NSURL *clientIDURL = [[NSBundle mainBundle] URLForResource:@"clientID" withExtension:@"json"];
+    NSURL *clientIDURL = [[NSBundle mainBundle] URLForResource:@"clientid" withExtension:@""];
     NSData *clientIDData = [NSData dataWithContentsOfURL:clientIDURL];
     NSDictionary *clientIDJSON = [NSJSONSerialization JSONObjectWithData:clientIDData options:0 error:nil];
-    NSURL *clientSecretURL = [[NSBundle mainBundle] URLForResource:@"clientSecret" withExtension:@"json"];
+    NSURL *clientSecretURL = [[NSBundle mainBundle] URLForResource:@"clientsecret" withExtension:@""];
     NSData *clientSecretData = [NSData dataWithContentsOfURL:clientSecretURL];
     NSDictionary *clientSecretJSON = [NSJSONSerialization JSONObjectWithData:clientSecretData options:0 error:nil];
     
