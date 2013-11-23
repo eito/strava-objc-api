@@ -12,6 +12,7 @@
 #import "STRVOAuthAuthorization.h"
 #import "STRVOAuthAuthorization+Internal.h"
 #import "NSDictionary+STRVQueryParams.h"
+#import "STRVNetworkActivityManager.h"
 
 @interface STRVOAuthView ()<UIWebViewDelegate>{
     NSOperationQueue *_queue;
@@ -98,6 +99,8 @@
         NSString *postString = [queryParams strv_encodeStringQueryParams];
         [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
         
+        // show activity indicator
+        [[STRVNetworkActivityManager manager] show];
         [NSURLConnection sendAsynchronousRequest:request
                                            queue:_queue
                                completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
@@ -106,6 +109,9 @@
                                                                                           error:nil];
                                    NSString *accessToken = [json valueForKey:@"access_token"];
                                    self.completion(accessToken, connectionError);
+
+                                   // hide network activity indicator
+                                   [[STRVNetworkActivityManager manager] hide];
                                }];
         [webView stopLoading];
         return NO;

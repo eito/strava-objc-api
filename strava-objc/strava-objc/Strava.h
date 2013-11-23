@@ -1,6 +1,7 @@
 
 #import "STRVEnumerations.h"
 #import "STRVUtility.h"
+#import "STRVNetworkActivityManager.h"
 #import "STRVCoding.h"
 #import "STRVAPIClient.h"
 #import "STRVMap.h"
