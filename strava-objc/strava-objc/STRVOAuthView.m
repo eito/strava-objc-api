@@ -42,10 +42,15 @@
     // cache our authorization
     self.authorization = authorization;
     
+    // check if we should always prompt for authorization
+    NSString *approvalPrompt = [STRVAPIClient shouldAlwaysPromptForAuthorization] ? @"force" : @"auto";
+    
     NSDictionary *queryParams = @{ @"client_id" : authorization.clientID ,
                                    @"response_type" : @"code",
                                    @"redirect_uri" : authorization.redirectURI,
-                                   @"scope" : NSStringFromSTRVOAuthAccessScope(authorization.scope) };
+                                   @"scope" : NSStringFromSTRVOAuthAccessScope(authorization.scope),
+                                   @"approval_prompt" : approvalPrompt };
+    
     NSString *queryString = [queryParams strv_encodeStringQueryParams];
     
     NSString *requestURLString = [[authorization.URL absoluteString] stringByAppendingFormat:@"?%@", queryString];
