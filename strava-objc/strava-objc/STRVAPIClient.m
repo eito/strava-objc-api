@@ -13,6 +13,8 @@ static NSString *kStravaClientSecret = nil;
 static NSURL *kStravaAuthorizationURL = nil;
 static NSURL *kStravaTokenURL = nil;
 static NSString *kStravaAccessToken = nil;
+static NSString *kStravaRedirectURI = nil;
+static BOOL kStravaShouldPromptForAuthorization;
 
 @implementation STRVAPIClient
 
@@ -41,6 +43,22 @@ static NSString *kStravaAccessToken = nil;
     return kStravaClientSecret;
 }
 
++(void)setRedirectURI:(NSString *)redirectURI {
+    kStravaRedirectURI = redirectURI;
+}
+
++(NSString *)redirectURI {
+    return kStravaRedirectURI;
+}
+
++(void)setShouldAlwaysPromptForAuthorization:(BOOL)forcePrompt {
+    kStravaShouldPromptForAuthorization = forcePrompt;
+}
+
++(BOOL)shouldAlwaysPromptForAuthorization {
+    return kStravaShouldPromptForAuthorization;
+}
+
 +(NSURL*)authorizationURL {
     if (!kStravaAuthorizationURL) {
         kStravaAuthorizationURL = [NSURL URLWithString:@"https://www.strava.com/oauth/authorize"];
@@ -53,5 +71,16 @@ static NSString *kStravaAccessToken = nil;
         kStravaTokenURL = [NSURL URLWithString:@"https://www.strava.com/oauth/token"];
     }
     return kStravaTokenURL;
+}
+
+-(void)fetchUserActivitiesWithCompletion:(void(^)(NSArray *activities, NSError *error))completion {
+    NSURL *url = [NSURL URLWithString:@"https://www.strava.com/api/v3/athlete/activities"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:self.requestQueue
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               
+                           }];
 }
 @end
