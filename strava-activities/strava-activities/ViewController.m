@@ -27,10 +27,6 @@
     STRVActivity *activity = [[STRVActivity alloc] initWithJSON:json];
     NSLog(@"%@", activity);
     
-    
-    // create our authorization for OAuth
-    STRVOAuthAuthorization *auth = [STRVOAuthAuthorization new];
-    
     //
     // NOTE: This is unnecessary in your real apps. This is purely to avoid committing sensitive data to github.
     //       You should just set the values on STRVAPIClient directly.
@@ -38,12 +34,15 @@
     //      +[STRVAPIClient setClientID:@""];
     //      +[STRVAPIClient setClientSecret:@""];
     [self loadAPIKeys];
-
-    auth.clientID = [STRVAPIClient clientID];
-    auth.clientSecret = [STRVAPIClient clientSecret];
     
-    auth.redirectURI = @"http://127.0.0.1";
-    auth.scope = STRVOAuthAccessScopeViewPrivate;
+    [STRVAPIClient setRedirectURI:@"http://127.0.0.1"];
+    
+    // For debugging...
+    [STRVAPIClient setShouldAlwaysPromptForAuthorization:YES];
+    
+    // create our authorization for OAuth
+    STRVOAuthAuthorization *auth = [[STRVOAuthAuthorization alloc] initWithScope:STRVOAuthAccessScopeViewPrivate];
+
     
     // create login view
     self.authView = [[STRVOAuthView alloc] initWithFrame:self.view.bounds];
