@@ -12,16 +12,36 @@
 
 @interface STRVOAuthAuthorization ()
 @property (nonatomic, copy, readwrite) NSString *authorizationCode;
+@property (nonatomic, assign, readwrite) STRVOAuthAccessScope scope;
 @end
 
 @implementation STRVOAuthAuthorization
 
--(id)init {
+-(id)initWithScope:(STRVOAuthAccessScope)scope {
     self = [super init];
     if (self) {
-        self.URL = [STRVAPIClient authorizationURL];
-        self.scope = STRVOAuthAccessScopePublic;
+        self.scope = scope;
     }
     return self;
 }
+
+#pragma mark Getters
+
+-(NSURL *)URL {
+    return [STRVAPIClient authorizationURL];
+}
+
+-(NSString*)clientID {
+    return [STRVAPIClient clientID];
+}
+
+-(NSString *)clientSecret {
+    return [STRVAPIClient clientSecret];
+}
+
+-(NSString *)redirectURI {
+    return [STRVAPIClient redirectURI];
+}
+
+
 @end

@@ -10,22 +10,29 @@
 
 @interface STRVOAuthAuthorization : NSObject
 
-/// authorization URL endpoint. Defaults to +[STRVAPIClient authorizationURL] if not specified
-@property (nonatomic, strong) NSURL *URL;
+/// authorization URL endpoint.
+/// Returns +[STRVAPIClient authorizationURL].
+@property (nonatomic, strong, readonly) NSURL *URL;
 
 /// clientID obtained from registering application with http://www.strava.com/developers
-@property (nonatomic, copy) NSString *clientID;
+/// Returns +[STRVAPIClient clientID].
+@property (nonatomic, copy, readonly) NSString *clientID;
 
 /// clientSecret obtained from registering application with http://www.strava.com/developers
-@property (nonatomic, copy) NSString *clientSecret;
+/// Returns +[STRVAPIClient clientSecret].
+@property (nonatomic, copy, readonly) NSString *clientSecret;
 
 /// auth code obtained from the initial authorization request
 @property (nonatomic, copy, readonly) NSString *authorizationCode;
 
 /// The desired scope for this application. Defaults to STRVOAuthAccessScopePublic.
-@property (nonatomic, assign) STRVOAuthAccessScope scope;
+@property (nonatomic, assign, readonly) STRVOAuthAccessScope scope;
 
-/// This redirect URI must match (or be a subdomain of) the authorization callback domain specified at app registration.
-@property (nonatomic, copy) NSString *redirectURI;
+/// The redirectURI for authorizing applications. Returns +[STRVAPIClient redirectURI];
+@property (nonatomic, copy, readonly) NSString *redirectURI;
+
+/// Initialize an authorization with the specified scope.
+/// Designated Initializer.
+-(id)initWithScope:(STRVOAuthAccessScope)scope;
 
 @end
