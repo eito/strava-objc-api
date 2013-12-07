@@ -52,9 +52,9 @@
 +(NSURL*)tokenURL;
 
 /// The queue in which to place all network requests.
-@property (nonatomic, strong) NSOperationQueue *requestQueue;
++(NSOperationQueue*)sharedRequestQueue;
 
 /// retrieves the activities for the current logged in user.
--(void)fetchUserActivitiesWithCompletion:(void(^)(NSArray *activities, NSError *error))completion;
++(void)fetchUserActivitiesWithCompletion:(void(^)(NSArray *activities, NSError *error))completion;
 
 @end

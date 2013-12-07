@@ -34,11 +34,15 @@
 }
 
 + (NSArray*)decodeArrayFromJSON:(NSDictionary*)json withKey:(NSString*)key class:(Class)cls {
+    return [STRVUtility decodeArrayFromJSONArray:[json valueForKey:key] class:cls];
+}
+
++ (NSArray*)decodeArrayFromJSONArray:(NSArray*)jsonArray class:(Class)cls {
     if (![cls conformsToProtocol:@protocol(STRVCoding)]) {
         return nil;
     }
     NSMutableArray *arr = [NSMutableArray array];
-    for (NSDictionary *d in [json valueForKey:key]) {
+    for (NSDictionary *d in jsonArray) {
         id<STRVCoding> obj = [[cls alloc] initWithJSON:d];
         [arr addObject:obj];
     }

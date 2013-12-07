@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EB4D2D31842CD59006EE376 /* STRVRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4D2D21842CD59006EE376 /* STRVRequestOperation.m */; };
+		4EB4D2D71842D41B006EE376 /* STRVJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4D2D61842D41B006EE376 /* STRVJSONRequestOperation.m */; };
 		4EB797F218374A650025D149 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB797F118374A650025D149 /* Foundation.framework */; };
 		4EB797F718374A650025D149 /* Strava.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4EB797F618374A650025D149 /* Strava.h */; };
 		4EB7985E18374CAB0025D149 /* STRVSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7985D18374CAB0025D149 /* STRVSegment.m */; };
@@ -42,6 +44,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4EB4D2D11842CD59006EE376 /* STRVRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRVRequestOperation.h; sourceTree = "<group>"; };
+		4EB4D2D21842CD59006EE376 /* STRVRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRVRequestOperation.m; sourceTree = "<group>"; };
+		4EB4D2D51842D41B006EE376 /* STRVJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRVJSONRequestOperation.h; sourceTree = "<group>"; };
+		4EB4D2D61842D41B006EE376 /* STRVJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRVJSONRequestOperation.m; sourceTree = "<group>"; };
+		4EB4D2D81842D47E006EE376 /* STRVRequestOperation+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "STRVRequestOperation+Internal.h"; sourceTree = "<group>"; };
 		4EB797EE18374A650025D149 /* libstrava-objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libstrava-objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB797F118374A650025D149 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4EB797F518374A650025D149 /* strava-objc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "strava-objc-Prefix.pch"; sourceTree = "<group>"; };
@@ -98,6 +105,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EB4D2D41842D3ED006EE376 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				4EB798DB183DDAE00025D149 /* STRVHTTPRequestManager.h */,
+				4EB798DC183DDAE00025D149 /* STRVHTTPRequestManager.m */,
+				4EB4D2D51842D41B006EE376 /* STRVJSONRequestOperation.h */,
+				4EB4D2D61842D41B006EE376 /* STRVJSONRequestOperation.m */,
+				4EB4D2D11842CD59006EE376 /* STRVRequestOperation.h */,
+				4EB4D2D81842D47E006EE376 /* STRVRequestOperation+Internal.h */,
+				4EB4D2D21842CD59006EE376 /* STRVRequestOperation.m */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
 		4EB797E518374A650025D149 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +168,7 @@
 		4EB7985B18374C8B0025D149 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4EB4D2D41842D3ED006EE376 /* Requests */,
 				4EB798791837784F0025D149 /* STRVActivity.h */,
 				4EB7987A1837784F0025D149 /* STRVActivity.m */,
 				4EB798D8183DD8710025D149 /* STRVAPIClient.h */,
@@ -162,8 +184,6 @@
 				4EB798D6183C9E560025D149 /* STRVComment.m */,
 				4EB7986C18376B360025D149 /* STRVEnumerations.h */,
 				4EB7986D18376B360025D149 /* STRVEnumerations.m */,
-				4EB798DB183DDAE00025D149 /* STRVHTTPRequestManager.h */,
-				4EB798DC183DDAE00025D149 /* STRVHTTPRequestManager.m */,
 				4EB79863183761E10025D149 /* STRVLeaderboardEntry.h */,
 				4EB79864183761E10025D149 /* STRVLeaderboardEntry.m */,
 				4EB79860183757870025D149 /* STRVMap.h */,
@@ -248,6 +268,7 @@
 				4EB798711837730E0025D149 /* STRVClub.m in Sources */,
 				4EB798D7183C9E560025D149 /* STRVComment.m in Sources */,
 				4EB7986B183768B60025D149 /* STRVAthlete.m in Sources */,
+				4EB4D2D71842D41B006EE376 /* STRVJSONRequestOperation.m in Sources */,
 				4EB798E718406C7B0025D149 /* NSDictionary+STRVQueryParams.m in Sources */,
 				4EB79865183761E10025D149 /* STRVLeaderboardEntry.m in Sources */,
 				4EB798771837737C0025D149 /* STRVShoe.m in Sources */,
@@ -256,6 +277,7 @@
 				4EB798DA183DD8710025D149 /* STRVAPIClient.m in Sources */,
 				4EB7987B1837784F0025D149 /* STRVActivity.m in Sources */,
 				4EB79862183757870025D149 /* STRVMap.m in Sources */,
+				4EB4D2D31842CD59006EE376 /* STRVRequestOperation.m in Sources */,
 				4EB7986E18376B360025D149 /* STRVEnumerations.m in Sources */,
 				4EB79868183763890025D149 /* STRVUtility.m in Sources */,
 				4EB798741837734A0025D149 /* STRVBike.m in Sources */,

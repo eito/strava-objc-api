@@ -15,6 +15,7 @@
 + (STRVUtility *)sharedInstance;
 
 + (NSArray*)decodeArrayFromJSON:(NSDictionary*)json withKey:(NSString*)key class:(Class)cls;
++ (NSArray*)decodeArrayFromJSONArray:(NSArray*)jsonArray class:(Class)cls;
 
 /// A common date formatter that uses the ISO 8601 format
 @property (nonatomic, strong, readonly) NSDateFormatter *dateFormatter;

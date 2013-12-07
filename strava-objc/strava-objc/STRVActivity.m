@@ -61,6 +61,10 @@
 
 @implementation STRVActivity
 
+-(NSString *)description {
+    return [NSString stringWithFormat:@"On %@ --- %@ - %.2fm - %u seconds", self.startDate, self.name, self.distance, self.movingTime];
+}
+
 #pragma mark STRVCoding
 
 -(id)initWithJSON:(NSDictionary *)json {
