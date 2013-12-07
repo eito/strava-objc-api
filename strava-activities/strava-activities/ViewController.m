@@ -38,7 +38,7 @@
     [STRVAPIClient setRedirectURI:@"http://127.0.0.1"];
     
     // For debugging...
-    [STRVAPIClient setShouldAlwaysPromptForAuthorization:YES];
+//    [STRVAPIClient setShouldAlwaysPromptForAuthorization:YES];
     
     // create our authorization for OAuth
     STRVOAuthAuthorization *auth = [[STRVOAuthAuthorization alloc] initWithScope:STRVOAuthAccessScopeViewPrivate];
@@ -51,6 +51,16 @@
     self.authView.completion = ^(NSString *accessToken, NSError *error) {
         if (!error) {
             [STRVAPIClient setAccessToken:accessToken];
+            [STRVAPIClient fetchUserActivitiesWithCompletion:^(NSArray *activities, NSError *error) {
+                if (error) {
+                    NSLog(@"Error retrieving activities: %@", error);
+                }
+                else {
+                    for (STRVActivity *activity in activities) {
+                        NSLog(@"Activity: %@", activity);
+                    }
+                }
+            }];
         }
         else {
             // TODO: Do something better when things go wrong.

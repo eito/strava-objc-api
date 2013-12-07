@@ -3,6 +3,8 @@
 #import "STRVUtility.h"
 #import "STRVNetworkActivityManager.h"
 #import "STRVCoding.h"
+#import "STRVRequestOperation.h"
+#import "STRVJSONRequestOperation.h"
 #import "STRVAPIClient.h"
 #import "STRVMap.h"
 #import "STRVActivity.h"
